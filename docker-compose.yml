@@ -1,0 +1,23 @@
+services:
+  example-db:
+    container_name: NestJs-API-Example-MySQL
+    image: mysql:latest
+    restart: always
+    volumes:
+      - ./mysql_data:/var/lib/mysql/
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql25
+      MYSQL_DATABASE: exampleDb
+      MYSQL_USER: workuser
+      MYSQL_PASSWORD: sevilla25
+    ports:
+      - 3309:3306
+    expose:
+      - '3309'
+
+  adminer-db:
+    container_name: NestJs-API-Example-MySQL-Adminer
+    image: adminer
+    restart: always
+    ports:
+      - 8085:8080
