@@ -11,7 +11,7 @@
     ```
 4. Instalar paquetes:
     ```
-    pip i .
+    pip install requirements.txt
     ```
 5. Instalar contenedor de la base de datos:
     ```
